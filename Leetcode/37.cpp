@@ -1,12 +1,11 @@
 //
-//  35.cpp
+//  37.cpp
 //  Leetcode
 //
 //  Created by Zhang Yan on 15/6/13.
 //  Copyright (c) 2015年 yan zhang. All rights reserved.
-/* 
- 水题
- 判断数独是否Valid，之所以水是因为：只需要判断已经存在的数字是否存在冲突即可。不需要判明是否存在可行解。
+/*
+ 贪心 + 搜索
  而想要判明可行解，基本靠搜索。暴力搜索：按任何顺序遍历各个空位，枚举其可能的数值，然后做一次全局的check。
  如果可行解确定只有一组的情况下，这样的搜索速度是不是尚且ok呢？毕竟空位不是那么多。
  直接考虑相对高效的贪心做法：枚举空位的顺序问题：一定是依据其可行值的数量来排序。可行值最少的空位，应当最优先被枚举。
@@ -15,7 +14,7 @@
 
 #include <stdio.h>
 #include "tools.h"
-// #include "run.h"
+#include "run.h"
 
 using namespace std;
 
@@ -57,11 +56,11 @@ bool isValidSudoku(vector<vector<char>>& board) {
             map[i][j] = board[i][j] == '.' ? 0 : (board[i][j] - '0');
     
     /*for(int i=0; i<9; i++) {
-        for(int j=0; j<9; j++) {
-            cout<<map[i][j]<<' ';
-        }
-        cout<<endl;
-    }*/
+     for(int j=0; j<9; j++) {
+     cout<<map[i][j]<<' ';
+     }
+     cout<<endl;
+     }*/
     
     for(int i=0; i<9; i++)
         if(!checkLine(i, true) || !checkLine(i, false))

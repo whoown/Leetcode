@@ -129,7 +129,7 @@ int main(int argc, const char * argv[]) {
     
 //    cout<<isMatch("", "212*dsf*..*..*......*.");
     
-    cout<<"something\n";
+    cout<<"Good\n";
     return 0;
 }
 
