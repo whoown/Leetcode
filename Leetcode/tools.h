@@ -21,6 +21,8 @@ std::string random_string(int len, int type);
 std::string random_string(int len, std::string alpha);
 
 void quick_sort(std::vector<int>& nums, int begin_index, int end_index);
+void qsort(std::vector<int>& nums, int begin_index, int end_index);
+
 
 
 #define MAX_INT 2147483647

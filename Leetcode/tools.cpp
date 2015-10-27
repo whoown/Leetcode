@@ -72,6 +72,25 @@ void quick_sort(vector<int>& nums, int begin_index, int end_index){
 }
 
 
+// sort [st, ed]
+void qsort(vector<int>& v, int st, int ed){
+    if(st >= ed)
+        return;
+    int div = v[st], i = st+1, j=ed;
+    while(i < j){ // [<div][div][>=div]
+        while(v[i]  < div && i < j) ++i; // i will equals to j finally.
+        while(v[j] >= div && i < j) --j;
+        swap(v[i], v[j]);
+    }
+    if(v[i] >= div) --i;
+    swap(v[st], v[i]);
+    
+    qsort(v, st, i-1);
+    qsort(v, i+1, ed);
+}
+
+
+
 /******************* Std Heap Implementions ********************/
 
 struct Heap{
