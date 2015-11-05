@@ -1,11 +1,10 @@
 //
-//  63.cpp
+//  64.cpp
 //  Leetcode
 //
 //  Created by Zhang Yan on 15/11/3.
 //  Copyright (c) 2015年 yan zhang. All rights reserved.
-//  简直日狗！这题居然用DP做，想了好久的数学解法，发现好难好难。。居然不是。。
-
+//  大水题，超级简单的DP,hello-world级别
 #include <stdio.h>
 #include "tools.h"
 //#include "run.h"
@@ -23,7 +22,7 @@ void print(int** ary, int n, int m){
     cout<<endl;
 }
 
-int uniquePathsWithObstacles(vector<vector<int>>& map) {
+int minPathSum(vector<vector<int>>& map) {
     int n = map.size();
     if(n <= 0)
         return 0;
@@ -36,36 +35,43 @@ int uniquePathsWithObstacles(vector<vector<int>>& map) {
         ans[i] = new int[m];
         memset(ans[i], 0, m*sizeof(int));
     }
-    ans[0][0] = map[0][0] ? 0 : 1;
+    ans[0][0] = map[0][0];
     
     for(int i=0; i<n; i++){
         for(int j=0; j<m; j++){
-            if(map[i][j]) // ans[i][j] will be 0
-                continue;
-            if(i-1>=0)
-                ans[i][j] += ans[i-1][j];
-            if(j-1>=0)
-                ans[i][j] += ans[i][j-1];
+            int v1 = -1, v2 = -1;
+            if(i-1 >=0)
+                v1 = ans[i-1][j];
+            if(j-1 >=0)
+                v2 = ans[i][j-1];
+            if(v1 >= 0 || v2 >= 0){
+                ans[i][j] = map[i][j] + (v1<0? v2 : (v2<0 ? v1 : (v1<v2?v1:v2)));
+            }
         }
     }
+    
+    //print(ans, n, m);
     
     return ans[n-1][m-1];
 }
 
 int main(int argc, const char * argv[]) {
     
-    int a[1][1] = {
-        {1}    };
+    int a[3][3] = {
+        {2, 3, 1},
+        {0, 0, 0},
+        {0, 6, 2}
+    };
     
     vector<vector<int>> v;
-    for(int i=0; i<1; i++){
+    for(int i=0; i<3; i++){
         vector<int> tmp;
-        for(int j=0; j<1; j++)
+        for(int j=0; j<3; j++)
             tmp.push_back(a[i][j]);
         v.push_back(tmp);
     }
     
-    cout<<uniquePathsWithObstacles(v)<<endl;
+    cout<<minPathSum(v)<<endl;
     
     cout<<"FIN"<<endl;
     return 0;
