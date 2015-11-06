@@ -39,6 +39,7 @@
 		4754A4DA1BEB1F0A00FE07B3 /* 68.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4754A4D91BEB1F0A00FE07B3 /* 68.cpp */; };
 		4754A4DC1BEB203B00FE07B3 /* 70.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4754A4DB1BEB203B00FE07B3 /* 70.cpp */; };
 		4754A4DE1BEB222500FE07B3 /* 69.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4754A4DD1BEB222500FE07B3 /* 69.cpp */; };
+		4754A4E01BECC20800FE07B3 /* 71.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4754A4DF1BECC20800FE07B3 /* 71.cpp */; };
 		47A198401BD7AABB000B905A /* 37.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47A1983F1BD7AABB000B905A /* 37.cpp */; };
 		47F0CAEB1BD79784007C27C8 /* 1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47F0CAC21BD79784007C27C8 /* 1.cpp */; };
 		47F0CAEC1BD79784007C27C8 /* 2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47F0CAC31BD79784007C27C8 /* 2.cpp */; };
@@ -126,6 +127,7 @@
 		4754A4D91BEB1F0A00FE07B3 /* 68.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 68.cpp; sourceTree = "<group>"; };
 		4754A4DB1BEB203B00FE07B3 /* 70.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 70.cpp; sourceTree = "<group>"; };
 		4754A4DD1BEB222500FE07B3 /* 69.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 69.cpp; sourceTree = "<group>"; };
+		4754A4DF1BECC20800FE07B3 /* 71.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 71.cpp; sourceTree = "<group>"; };
 		47A1983F1BD7AABB000B905A /* 37.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 37.cpp; sourceTree = "<group>"; };
 		47F0CAB81BD7973B007C27C8 /* Leetcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Leetcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F0CAC21BD79784007C27C8 /* 1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 1.cpp; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				4754A4D91BEB1F0A00FE07B3 /* 68.cpp */,
 				4754A4DD1BEB222500FE07B3 /* 69.cpp */,
 				4754A4DB1BEB203B00FE07B3 /* 70.cpp */,
+				4754A4DF1BECC20800FE07B3 /* 71.cpp */,
 				47F0CAE81BD79784007C27C8 /* run.h */,
 				47F0CAE91BD79784007C27C8 /* tools.cpp */,
 				47F0CAEA1BD79784007C27C8 /* tools.h */,
@@ -356,6 +359,7 @@
 				47F0CAFE1BD79784007C27C8 /* 20.cpp in Sources */,
 				47F0CAED1BD79784007C27C8 /* 3.cpp in Sources */,
 				47F0CB081BD79784007C27C8 /* 30_2.cpp in Sources */,
+				4754A4E01BECC20800FE07B3 /* 71.cpp in Sources */,
 				47258CB11BD9DC5A00A4E7A6 /* 41.cpp in Sources */,
 				47F0CAFC1BD79784007C27C8 /* 18.cpp in Sources */,
 				4737BA571BE7265B0030D884 /* 56.cpp in Sources */,
