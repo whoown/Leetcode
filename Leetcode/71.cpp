@@ -6,7 +6,7 @@
 //  Hello-kitty 简单的链表大水题
 #include <stdio.h>
 #include "tools.h"
-#include "run.h"
+//#include "run.h"
 
 using namespace std;
 
