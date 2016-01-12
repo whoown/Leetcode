@@ -1,5 +1,5 @@
 //
-//  75.cpp
+//  75.cpp 【3】
 //  Leetcode
 //
 //  Created by yan zhang on 15/11/10.
@@ -9,7 +9,7 @@
 
 #include <stdio.h>
 #include "tools.h"
-#include "run.h"
+//#include "run.h"
 
 using namespace std;
 
@@ -17,12 +17,28 @@ using namespace std;
 
 
 void sortColors(vector<int>& nums) {
+    int pr = nums.size()-1, pl = 0, p = 0;
     
+    while(p <= pr){
+        if (nums[p] == 0) {
+            swap(nums[pl++], nums[p++]);
+        }else if(nums[p] == 1){
+            ++p;
+        }else if(nums[p] == 2){
+            swap(nums[pr--], nums[p]); // without --p
+        }
+    }
 }
 
 int main(int argc, const char * argv[]) {
     
-    
+    int a[] = {0,2,1,1,2,1,0,0,0,1,2,0};
+    vector<int> v;
+    for(int i=0; i<sizeof(a)/sizeof(int);i++)
+        v.push_back(a[i]);
+    sortColors(v);
+    for(int i=0; i<v.size(); i++)
+        cout<<v[i]<<' ';
     
     cout<<"FIN"<<endl;
     return 0;
