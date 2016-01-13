@@ -17,6 +17,29 @@ const int ALPHA_TYPE_LOWER_LETTERS = 1;
 const int ALPHA_TYPE_UPPER_LETTERS = 2;
 const int ALPHA_TYPE_NUMBERS = 3;
 
+
+void printLinkList(ListNode* head){
+    while(head){
+        cout<<head->val<<" ";
+        head = head->next;
+    }
+    cout<<endl;
+}
+
+ListNode* buildLinkList(int* arr, int size){
+    ListNode* list = 0, *head = 0;
+    for(int i=0; i<size; i++){
+        if(list == 0){
+            head = list = new ListNode(arr[i]);
+        }else {
+            list->next = new ListNode(arr[i]);
+            list = list->next;
+        }
+    }
+    return head;
+}
+
+
 string random_string(int len, int type){
     string alpha;
     switch(type){

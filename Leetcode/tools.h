@@ -17,13 +17,20 @@
 #include <vector>
 #include <iostream>
 
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
+
 std::string random_string(int len, int type);
 std::string random_string(int len, std::string alpha);
 
 void quick_sort(std::vector<int>& nums, int begin_index, int end_index);
 void qsort(std::vector<int>& nums, int begin_index, int end_index);
-
-
+void printLinkList(ListNode* head);
+ListNode* buildLinkList(int* arr, int size);
 
 #define MAX_INT 2147483647
 #define MIN_INT -2147483648
