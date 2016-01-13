@@ -5,6 +5,10 @@
 //  Copyright (c) 2015年 yan zhang. All rights reserved.
 /* 两个单词word1, word2，允许三种操作：删除某个字母；插入某个字母；替换某个字母；问从word1变换到word2的最小操作步数。
  这个还稍微有点意思。<人的脑子就是时而不时的会抽风；这个问题其实很简单的DP；但是一旦陷入“缺乏条理”的细节中，你就完了！>
+=======
+/* 两个单词word1, word2，允许三种操作：1.删除某个字母； 2.插入某个字母； 3.替换某个字母；问从word1变换到word2的最小操作步数。
+ 这个还稍微有点意思。
+>>>>>>> Stashed changes
  */
 #include <stdio.h>
 #include "tools.h"
@@ -13,7 +17,6 @@
 using namespace std;
 
 #ifdef __RUN__
-
 
 #define max(a,b) (a>b ? a : b)
 #define min(a,b) (a<b ? a : b)
@@ -55,6 +58,14 @@ int minDistance(string word1, string word2) {
     return d[len1][len2];
 }
 
+=======
+int minDistance(string word1, string word2) {
+    
+    return 0;
+}
+
+
+>>>>>>> Stashed changes
 int main(int argc, const char * argv[]) {
     cout<<minDistance("abcd", "axbxcxdx")<<endl;
     cout<<"FIN"<<endl;
